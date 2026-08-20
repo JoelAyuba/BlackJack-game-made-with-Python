@@ -26,3 +26,24 @@ This game runs on pure Python and relies exclusively on the built-in `random` mo
 4. Execute the following command (assuming the file is named `blackjack.py`):
    ```bash
    python blackjack.py
+How to Play
+The game begins by dealing two cards to you and two to the dealer.
+
+One of the dealer's cards is kept hidden to give the house an edge.
+
+You will be prompted to either Hit (type h) to draw another card, or Stand (type s) to keep your current hand.
+
+If your hand's total value exceeds 21, you "bust" and the dealer wins immediately.
+
+Once you stand, the dealer reveals their hidden card and automatically hits until their total is 17 or higher.
+
+The participant with the highest hand value that is 21 or below wins the game. A tie results in a push.
+
+Code Structure
+Card: Represents a single playing card with a specific suit (Hearts, Diamonds, Clubs, Spades) and value.
+
+Deck: Generates a standard 52-card deck upon initialization and includes methods for shuffling and dealing.
+
+Hand: Manages the cards currently held by either the player or the dealer, calculating the total score and dynamically adjusting for Aces.
+
+play_blackjack(): The main game loop that orchestrates the flow of the game, handles user input, and evaluates the final win/loss conditions.
